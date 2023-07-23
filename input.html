@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-box {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: red;
+  color: white;
+}
+
+.remove-cross {
+  cursor: pointer;
+  margin-left: 5px;
+}
+    </style>
+</head>
+<body>
+    <!-- <input type="text" id="textInput" />
+    <button id="addButton">Add Word</button>
+    <div class="result"></div>
+    <div id="wordContainer"></div> -->
+    <input type="text" id="textInput" />
+<div id="wordContainer"></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+   $(document).ready(function() {
+  $("#textInput").keyup(function(event) {
+    if (event.keyCode === 32) {
+      var inputValue = $(this).val().trim();
+      if (inputValue !== '') {
+        addWord(inputValue);
+        $(this).val('');
+      }
+    }
+  });
+
+  $("#wordContainer").on("click", ".remove-cross", function() {
+    $(this).parent().remove();
+  });
+});
+
+function addWord(word) {
+  var redBox = $("<div>").addClass("red-box").text(word);
+  var removeCross = $("<span>").addClass("remove-cross").text("x");
+  redBox.append(removeCross);
+  $("#wordContainer").append(redBox);
+}
+</script>
+</html>

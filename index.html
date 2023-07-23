@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style the track of the range input */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px; /* Adjust the height of the track */
+  background-color: green; /* Set the track color to green */
+  border-radius: 5px; /* Optional: Add rounded corners to the track */
+}
+
+/* Style the slider (thumb) of the range input */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  width: 20px; /* Set the width of the slider */
+  height: 20px; /* Set the height of the slider */
+  background-color: pink; /* Set the slider color to pink */
+  border-radius: 50%; /* Optional: Create a circular slider */
+  cursor: pointer; /* Optional: Change cursor on hover */
+}
+
+/* Optional: Style for non-WebKit browsers (Firefox) */
+input[type="range"]::-moz-range-thumb {
+  /* Style rules for Firefox slider thumb */
+}
+
+/* Optional: Style for non-WebKit browsers (Edge and IE) */
+input[type="range"]::-ms-thumb {
+  /* Style rules for Edge and IE slider thumb */
+}
+
+    </style>
+</head>
+<body>
+    <input type="range">
+</body>
+</html>
