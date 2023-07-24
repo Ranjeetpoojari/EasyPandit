@@ -10,10 +10,6 @@
     background: #C03;
 }
 
-.w-35 {
-    width: 35%;
-}
-
 .text-color1 {
     color: rgb(120, 120, 120);
 }
@@ -333,14 +329,17 @@ input[type="checkbox"]:checked~p {
 /* *************** pandit info end ******************** */
 .range-color1 {
     background: linear-gradient(90deg, #E4E4E7 50%, #E4E4E7 50%);
+    width: 100%;
 }
 
 .range-color2 {
     background: linear-gradient(90deg, #FEE2E2 50%, #E4E4E7 50%);
+    width: 100%;
 }
 
 .range-color3 {
     background: linear-gradient(90deg, #FEE2E2 50%, #FEE2E2 50%);
+    width:100%;
 }
 /* option for pandit start */
 .more_option_pandit{height:47px;border: 1px solid rgb(200, 200, 200);}
@@ -416,6 +415,9 @@ input[type="checkbox"]:checked~p {
 }
 
 @media (max-width: 460px) {
+    .w-sm-35 {
+        width: 35%;
+    }
     .login-form {
         width: 100%;
         padding: 12px;

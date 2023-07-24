@@ -64,7 +64,7 @@ $(document).ready(function() {
                 console.log('done');
         }
         if(password.trim() === ''){
-            $('#passwordError').text('The pass word  is required.');
+            $('#passwordError').text('The pass word is required.');
             isValid = false;
         }
         else if(password.length <= 8 ){
