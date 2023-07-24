@@ -1,21 +1,3 @@
-$(document).ready(function(){
-    $("#continue").click(function(){
-        event.preventDefault();
-       
-
-    });
-    $("#continue1").click(function(){
-        event.preventDefault();
-    //     $('#pills-contact-tab').addClass('show active');
-    //     $('#pills-contact').addClass('show active');
-    //     $('#pills-profile-tab').removeClass('show active');
-    //     $('#pills-profile').removeClass('show active');
-    //     $('.rangeid').addClass('range-color3');
-    // $('.rangeid').removeClass('range-color2');
-    // $('.rangeid').removeClass('range-color1');
-    // $('.ch2').removeClass('d-none');
-    });
-});
 
 //  login form validation
 $(document).ready(function() {
@@ -23,13 +5,16 @@ $(document).ready(function() {
         event.preventDefault()
         var emailphone = $('#exampleInputEmail1').val();
         var password = $('#passwordInput').val();
-        // var passparttren =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+        var emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var num_pattern = /^\d{10}$/;
         let isValid = true;
         if(emailphone.trim() === ''){
             $('#emailError').text('Email id or phone number is required.');
             isValid = false;
         }
          else {
+            $('#emailError').text('');
+            isValid = true;
                 console.log('done');
         }
         if(password.trim() === ''){
@@ -54,12 +39,21 @@ $(document).ready(function() {
         var emailphone = $('#exampleInputEmail1').val();
         var password = $('#passwordInput').val();
         var name = $('#Fullname').val();
+        var regEx = /^[A-Za-z]+$/;
         // var passparttren =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
         let isValid = true;
         if(name.trim() === ''){
             $('#fullnameerror').text('Full name is required');
+             isValid =false
         }
+        else if(!regEx.test(name)){
+            
+            $('#fullnameerror').text('Please provide Valid name');
+            isValid = false
+        } 
         else{
+            $('#fullnameerror').text('');
+            isValid = true
             console.log('done');
         }
         if(emailphone.trim() === ''){
@@ -92,8 +86,7 @@ $(document).ready(function() {
         event.preventDefault();
         var cover_Location = $('#cover_Location').val();
         var addreess = $('#addreess').val();
-        // var name = $('#Fullname').val();
-        // var passparttren =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+        var regEx = /^[A-Za-z]+$/;
         let isValid = true;
         if(addreess.trim() === ''){
             console.log("not Yet addree")
@@ -107,9 +100,13 @@ $(document).ready(function() {
             console.log("not yet");
             $('#cover_LocationError').text('Location will cover for puja is required.');
             isValid = false;
+        }else if(!regEx.test(cover_Location)){
+            $('#cover_LocationError').text('Please Provide Your Currect Location');
+            isValid = false;
         }
          else {
-                console.log('ok');
+            isValid =true;
+            $('#cover_LocationError').text('');
         }
         if(isValid){
             console.log("form is submited")
@@ -145,40 +142,49 @@ $('#continue1').on('click',function(event) {
 });
 });
 $(document).ready(function(){
-    $("#pandit_info_btn").on("click",function(){
+    $('form').submit(function(event){
         event.preventDefault();
         var total_no_puja = $("#total_no_puja").val();
         var reference = $("#referenceid").val();
-      
+        var regEx = /^[0-9]+$/;
+        let isValid = true;
         if(reference.trim() ===''){
         // console.log("good night");
         $("#referenceError").text("Reference ID is required");  
+        isValid = false;
+    }
+    else if(!regEx.test(reference)){
+        $("#referenceError").text("Only Numbers");  
+        isValid = false;
     }
     else{
+        isValid = true;
         // console.log("good morning");
         $("#referenceError").text(""); 
     }
     if(total_no_puja.trim() ===""){
+      
         $("#total_no_pujaError").text("Reference ID is required");  
+        isValid = false;
+    }else if(!regEx.test(total_no_puja)){
+        $("#total_no_pujaError").text("Only numbers");  
+        isValid = false;
     }
     else{
         $("#total_no_pujaError").text("");
+        isValid = true;
     }
     var isLanguage_preference = $(".Language_preference:checked").length ;
     if(isLanguage_preference < 1){
-         console.log("good night");
+        isValid = false;
          $('#Language_preferenceError').text('Expertise in puja is required');
         }
         else{
-        console.log("good morning");
+           isValid = true; 
         $('#Language_preferenceError').text('');
     }
-    var formData = $(this).serializeArray();
-    var data = {};
-    $.each(formData, function(_, field) {
-        data[field.name] = field.value;
-      });
-      console.log(JSON.stringify(data));
+    if(isValid = true){
+    }
     });
 });
 
