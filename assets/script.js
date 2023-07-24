@@ -44,7 +44,7 @@ $(document).ready(function() {
         var emailphone = $('#exampleInputEmail1').val();
         var password = $('#passwordInput').val();
         var name = $('#Fullname').val();
-        var regEx = /^[A-Za-z]+$/;
+        var regEx = /^[A-Za-z ]+$/;
         // var passparttren =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
         let isValid = true;
         if(name.trim() === ''){
@@ -99,7 +99,7 @@ $(document).ready(function() {
         event.preventDefault();
         var cover_Location = $('#cover_Location').val();
         var addreess = $('#addreess').val();
-        var regEx = /^[A-Za-z]+$/;
+        var regEx = /^[A-Za-z ]+$/;
         let isValid = true;
         if(addreess.trim() === ''){
             $('#addreess').addClass('border-danger');
