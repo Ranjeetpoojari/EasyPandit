@@ -30,10 +30,10 @@
                 <h3 class="f_size-3 font-600 text-center text-lg-start mt-2 mt-md-3 mt-lg-5">Sign up?</h3>
                <p class="f_size-1 font-prime text-capitalize text-center text-lg-start">"Welcome to our sign-up page! We're excited to have you join our community. To create your account, please provide the following information.</p>
                <div class="signup_media_con">
-                <ul class="d-flex ps-0 justify-content-between">
-                  <li class=""><a href="#" class="d-flex justify-content-center align-items-center"><img src="assets\images\Google - png.png" alt="" srcset=""  class="media_icon_img"></a></li>
-                  <li class=""><a href="#" class="d-flex justify-content-center align-items-center"><img src="assets\images\LinkedIn - png.png" alt="" srcset="" class="media_icon_img"></a></li>
-                  <li class=""><a href="#" class="d-flex justify-content-center align-items-center"><img src="assets\images\Facebook - png.png" alt="" srcset="" class="media_icon_img"></a></li>
+                <ul class="ms-0 mr-0 ps-0 pr-0">
+                  <li>
+                    <a href="#" class="d-flex justify-content-center align-items-center">
+                      <img src="assets\images\Google - png.png" alt="" srcset=""  class="media_icon_img w-100 d-block"></a></li>
                 </ul>
                </div>
                <div class=" form_group">
@@ -41,17 +41,30 @@
                 <input type="text" class="input" id="Fullname" aria-describedby="emailHelp" name="name">
                 <span id="fullnameerror" class="text-danger f_size-1 font-600 lh-1 error"></span>
               </div>
-              <div class="form_group">
-                <label for="exampleInputEmail1" class="label bg-prim px-1 f_size-1 .text-color1">Email/phone number</label>
-                <input type="text" class="input" id="exampleInputEmail1" name="email">
-                <span id="emailError" class="text-danger f_size-1 font-600 lh-1 error"></span>
+              <div class="row">
+              <div class="col-6">
+                <div class="form_group">
+                  <label for="exampleInputEmail1" class="label bg-prim px-1 f_size-1 text-color1">Email</label>
+                  <input type="text" class="input" id="exampleInputEmail1" name="email">
+                  <span id="emailError" class="text-danger f_size-1 font-600 lh-1 error"></span>
+                </div>
               </div>
+              <div class="col-6">
+                <div class="form_group">
+                  <label for="exampleInput" class="label bg-prim px-1 f_size-1 text-color1">Phone number</label>
+                  <input type="text" class="input" id="PhoneInput" name="phone">
+                  <span id="PhoneError" class="text-danger f_size-1 font-600 lh-1 error"></span>
+                </div>
+              </div>
+            </div>
             <div class="form_group">
-                <label for="passwordInput" class="label bg-prim px-1 f_size-2 .text-color1">Password</label>
-                <input type="password" class="input" id="passwordInput" aria-describedby="emailHelp" name="password">
-                <span id="passwordError" class="text-danger f_size-1 font-600 lh-1 error"></span>
-               <a href="" class="text-capitalize text-decoration-none text-dark font-500 text-end w-100 f_size-1 d-block">Forget Password</a>
-              </div>
+              <label for="passwordInput" class="label bg-prim px-1 f_size-2 .text-color1">Password</label>
+              <input type="password" class="input" id="passwordInput" aria-describedby="emailHelp" name="password">
+              <span id="passwordError" class="text-danger f_size-1 font-600 lh-1 error"></span>
+              <a href=""
+                class="text-capitalize text-decoration-none text-dark font-500 text-end w-100 f_size-1 d-block">Forget
+                Password</a>
+            </div>
                <p class="f_size-1 text-center text-lg-start ps-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
                  <div class="form-check">
                    <input class="form-check-input d-block" type="checkbox" value="accepted" id="invalidCheck2"  name="accepted">

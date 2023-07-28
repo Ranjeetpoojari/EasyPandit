@@ -123,7 +123,7 @@
 
 .media_icon {
     border: 1px solid rgb(200, 200, 200);
-    width: calc(160px + (240 - 160)*(100vw - 320px) / (1920 - 320));
+    width: 100%;
     height: calc(50px + (80 - 50) * (100vh - 320px) / (1920 - 320));
 }
 .media_icon_img {
@@ -140,7 +140,6 @@
 
 .signup_media_con ul li a {
     height: calc((50px + (85 - 50)*(100vh - 320px) / (1920 - 320)));
-    width: calc(75px + (180 - 75)*(100vw - 320px) / (1920 - 320));
     background-color: #F4F4F5;
     border-radius: 10px;
 }
@@ -333,12 +332,16 @@ input[type="checkbox"]:checked~p {
 }
 
 .range-color2 {
-    background: linear-gradient(90deg, #FEE2E2 50%, #E4E4E7 50%);
+    background: linear-gradient(90deg, #FEE2E2 33%, #E4E4E7 33% , #E4E4E7 33%);
     width: 100%;
 }
 
 .range-color3 {
-    background: linear-gradient(90deg, #FEE2E2 50%, #FEE2E2 50%);
+    background: linear-gradient(90deg, #FEE2E2 65%, #E4E4E7 45%);
+    width:100%;
+}
+.range-color4 {
+    background: linear-gradient(90deg, #FEE2E2 50%,#FEE2E2 50%);
     width:100%;
 }
 /* option for pandit start */
