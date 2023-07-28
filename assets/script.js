@@ -64,7 +64,7 @@ $(document).ready(function() {
         var emailphone = $('#exampleInputEmail1').val();
         var password = $('#passwordInput').val();
         var name = $('#Fullname').val();
-        var regEx = /^[A-Za-z]+$/;
+        var regEx = /^[A-Za-z ]+$/;
         var emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         var num_pattern = /^\d{10}$/;
         // var passparttren =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
